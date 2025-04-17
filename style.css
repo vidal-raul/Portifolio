@@ -1,0 +1,874 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: none;
+    border: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-size: 60.5%;
+    overflow-x: hidden;
+}
+
+:root {
+    --blue: #0d2381;
+    --dark-blue: #0a133f;
+    --light-blue: #254fa8;
+    --white: #fff;
+    --dark: #1e1c2a;
+    --grey: #9e9e9e33;
+    --html: #fc490b;
+    --css: #1758a7;
+    --js: #efd81d;
+    --linkedin: #0072b1;
+}
+
+/* Header */
+
+.menu {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    position: fixed;
+    margin: 0 auto;
+    background-color: var(--white);
+    background-size: cover;
+    z-index: 1;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h3 {
+    color: var(--dark-blue);
+    font-size: 2.2rem;
+    font-weight: 550;
+}
+
+.menu-list ul {
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-list li a {
+    padding: 3rem 1rem 2rem 1rem;
+    color: var(--dark);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.05s ease-in;
+}
+
+.menu-list li a:hover {
+    background-color: var(--grey);
+    border-bottom: 4px solid var(--blue);
+    color: var(--blue);
+}
+
+.menu .contato button {
+    padding: 1rem 4rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.menu .contato button:hover {
+    background-color: var(--dark-blue);
+    box-shadow: 0.1rem 0.1rem 1rem var(--light-blue);
+    transform: scale(1.05);
+}
+
+/* Home */
+
+.home-section {
+    padding: 10rem 4% 7rem 4%;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-text {
+    width: 50vw;
+}
+
+.home-text h1 {
+    font-size: 2.5rem;
+    font-weight: 600; 
+}
+
+.home-text h1 span {
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.home-text p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0.4rem 0 0.4rem 0;
+    text-align: justify;
+}
+
+.img {
+    width: 45rem;
+    height: 45rem;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    background-image: url(/img/RV.JPG);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0.7rem var(--light-blue);
+    animation: floating 1.5s ease-out infinite alternate;
+}
+
+@keyframes floating {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 2rem;
+    }
+}
+
+/* Especialidades */
+
+.esp-section {
+    padding: 3rem 4% 2rem 4%;
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.esp-section h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 0 0 1rem 0;
+}
+
+.esp-section span {
+    color: var(--blue);
+}
+
+.esp-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+.esp-content .esp-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 2rem;
+    border: solid 1px var(--dark-blue);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.esp-content .esp-box i {
+    font-size: 8rem;
+}
+
+#html {
+    color: var(--html);
+}
+
+#css {
+    color: var(--css);
+}
+
+#js {
+    color: var(--js);
+}
+
+.esp-content .esp-box h3 {
+    font-size: 2.3rem;
+    padding: 1rem 0;
+    /*color: var(--dark-blue);*/
+}
+
+.esp-content .esp-box p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.esp-box:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    box-shadow: 0.1rem 0.1rem 1rem var(--light-blue);
+    transform: scale(1.05);
+}
+
+.esp-content:hover .esp-box {
+    opacity: 0.5;
+}
+
+.esp-content .esp-box:hover {
+    opacity: 1;
+}
+
+/* Projetos */
+
+.proj-section {
+    padding: 3rem 4% 3rem 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.proj-section h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 0 0 2rem 0;
+}
+
+.proj-section h2 span {
+    color: var(--blue);
+}
+
+.proj-content {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: row;
+    gap: 4%;
+}
+
+.proj-box {
+    width: 36rem;
+    height: 46rem;
+    border-radius: 4rem;
+    background-image: url(/img/RV2.JPG);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.proj-box:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 4rem;
+    background-color: #000000b9;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: .4s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* Sobre */
+
+.sobre-section {
+    padding: 3rem 4% 2rem 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--grey);
+}
+
+.sobre-section h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 0 0 1rem 0;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+}
+
+.sobre-content .sobre-img {
+    width: 30vw;
+    padding: 0 2rem 0 0;
+}
+
+.sobre-content .sobre-img img{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 20px;
+    box-shadow: 0.2rem 0.2rem 0.7rem var(--light-blue);
+}
+
+.sobre-txt {
+    padding: 0 0 0 1rem;
+}
+
+.sobre-txt h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.sobre-txt span {
+    color: var(--blue);
+}
+
+.sobre-txt p {
+    padding: 0.5rem 0 1rem 0;
+    width: 70rem;
+    text-align: justify;
+    font-size: 1.4rem;
+}
+
+#linkedin {
+    color: var(--linkedin);
+}
+
+#github {
+    color: var(--dark);
+}
+
+.sobre-txt i {
+    font-size: 4rem;
+    padding: 0.5rem 1rem 0 0rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.sobre-txt i:hover {
+    transform: scale(1.05);
+    text-shadow: 0.05rem 0.05rem 0.1rem var(--dark-blue);
+}
+
+/* Contato */
+
+.cont-section {
+    padding: 3rem 4% 4rem 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cont-section h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 0 0 1rem 0;
+}
+.cont-section span {
+    color: var(--blue);
+}
+.cont-content {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    padding: 1rem 1rem 1rem 1rem;
+    border: 0.1rem solid var(--blue);
+    border-radius: 2rem;
+}
+
+form {
+    max-width: 50rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input, form textarea {
+    width: 35rem;
+    background-color: #cccccca8;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    outline: 0;
+}
+
+form textarea {
+    resize: none;
+    max-height: 50rem;
+}
+
+form .btn {
+    padding: 1rem ;
+}
+
+form .btn input {
+    width: 18rem;
+    padding: 1rem 4rem;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .1s;
+}
+
+form .btn input:hover {
+    background-color: var(--dark-blue);
+    box-shadow: 0.1rem 0.1rem 1rem var(--light-blue);
+    transform: scale(1.05);
+}
+
+/* Rodape */
+
+footer {
+    padding: 3rem 4% 2rem 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -0.1rem 1rem #ccc;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;    
+    padding: 1rem 0 1rem 0;
+    justify-content: space-between;
+    gap: 70rem;
+    border-bottom: 0.2rem solid var(--blue);
+}
+
+.logo-footer h3{
+    color: var(--dark-blue);
+    font-size: 2rem;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.email-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-footer a {
+    font-size: 1.8rem;
+    color: var(--dark);
+    text-decoration: underline;
+}
+
+.email-footer i {
+    padding: 0.5rem 1rem 0 0rem;
+    font-size: 2.4rem;
+    color: var(--blue);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.email-footer i:hover {
+    transform: scale(1.05);
+    text-shadow: 0.05rem 0.05rem 0.05rem var(--dark-blue);
+}
+
+@media screen and (max-width: 1250px) {
+    /* Header */
+
+    .menu-list, .contato {
+        display: none;
+    }
+
+    /* Home */
+    .home-section {
+        padding: 10rem 8% 7rem 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-content {
+        flex-direction: column-reverse;
+    }
+
+    /* Especialidades */
+    .esp-content {
+        display: block;
+    }
+
+    /* Projetos */
+    .proj-content {
+        display: block;
+    }
+
+    /* Sobre */
+    .sobre-content {
+        display: block;
+    }
+
+    /* Contato */
+    .cont-content {
+        display: block;
+    }
+}
+
+/*Chat GPT
+
+    /* Responsividade para telas menores que 1250px
+@media (max-width: 1250px) {
+    /* Ajustes no cabeçalho
+    .menu {
+        height: 60px;
+        justify-content: space-between;
+        padding: 0 2%;
+    }
+
+    .logo h3 {
+        font-size: 1.8rem;
+    }
+
+    .menu-list ul {
+        width: 50rem;
+    }
+
+    .menu-list li a {
+        font-size: 1.4rem;
+    }
+
+    .menu .contato button {
+        padding: 0.8rem 3.5rem;
+        font-size: 1.4rem;
+    }
+
+    /* Ajustes na seção Home
+    .home-text h1 {
+        font-size: 2rem;
+    }
+
+    .home-text p {
+        font-size: 1.3rem;
+    }
+
+    .img {
+        width: 35rem;
+        height: 35rem;
+    }
+
+    /* Especialidades
+    .esp-content .esp-box i {
+        font-size: 7rem;
+    }
+
+    .esp-content .esp-box h3 {
+        font-size: 2rem;
+    }
+
+    .esp-content .esp-box p {
+        font-size: 1.3rem;
+    }
+
+    /* Projetos
+    .proj-box {
+        width: 30rem;
+        height: 40rem;
+    }
+}
+
+/* Responsividade para telas menores que 1024px
+@media (max-width: 1024px) {
+    .menu-list ul {
+        width: 45rem;
+    }
+
+    .menu-list li a {
+        font-size: 1.2rem;
+    }
+
+    .menu .contato button {
+        padding: 0.7rem 3rem;
+        font-size: 1.3rem;
+    }
+
+    /* Seção Home
+    .home-text {
+        width: 45vw;
+    }
+
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-text p {
+        font-size: 1.2rem;
+    }
+
+    .img {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    /* Especialidades
+    .esp-content {
+        gap: 1rem;
+    }
+
+    .esp-content .esp-box i {
+        font-size: 6rem;
+    }
+
+    .esp-content .esp-box h3 {
+        font-size: 1.8rem;
+    }
+
+    .esp-content .esp-box p {
+        font-size: 1.2rem;
+    }
+
+    /* Projetos
+    .proj-box {
+        width: 28rem;
+        height: 38rem;
+    }
+}
+
+/* Responsividade para telas menores que 768px (Tablets)
+@media (max-width: 768px) {
+    /* Menu e Header
+    .menu {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 2%;
+    }
+
+    .menu-list ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu .contato {
+        margin-top: 1rem;
+    }
+
+    /* Home
+    .home-content {
+        flex-direction: column;
+    }
+
+    .home-text {
+        width: 100%;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Especialidades
+    .esp-content {
+        flex-direction: column;
+    }
+
+    .esp-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Projetos
+    .proj-content {
+        flex-direction: column;
+    }
+
+    .proj-box {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Sobre
+    .sobre-content {
+        flex-direction: column;
+    }
+
+    .sobre-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sobre-txt {
+        text-align: center;
+    }
+
+    .sobre-txt p {
+        width: 100%;
+    }
+}
+
+/* Responsividade para telas menores que 480px (Celulares)
+@media (max-width: 480px) {
+    Header
+    .logo h3 {
+        font-size: 1.6rem;
+    }
+
+    .menu-list ul {
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .menu-list li a {
+        font-size: 1rem;
+    }
+
+    .menu .contato button {
+        padding: 0.5rem 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    Home
+    .home-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-text p {
+        font-size: 1.1rem;
+    }
+
+    Especialidades
+    .esp-section h2 {
+        font-size: 2rem;
+    }
+
+    .esp-content .esp-box i {
+        font-size: 5rem;
+    }
+
+    .esp-content .esp-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .esp-content .esp-box p {
+        font-size: 1rem;
+    }
+
+    Projetos
+    .proj-section h2 {
+        font-size: 2rem;
+    }
+
+    .proj-box {
+        width: 100%;
+        height: auto;
+    }
+
+    Sobre
+    .sobre-section h2 {
+        font-size: 2rem;
+    }
+
+    .sobre-txt h2 {
+        font-size: 2rem;
+    }
+
+    .sobre-txt p {
+        font-size: 1.2rem;
+    }
+
+    .sobre-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    Contato 
+    form input, form textarea {
+        width: 100%;
+    }
+
+    form .btn input {
+        width: 100%;
+    }
+
+    Footer
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .email-footer a {
+        font-size: 1.4rem;
+    }
+
+    .email-footer i {
+        font-size: 2rem;
+    }
+}
+
+*/
+
+/* @media screen and (max-width: 1250px) {
+
+    .menu-list, .contato {
+        display: none;
+    }
+
+    .home-section {
+        padding: 10rem 8% 7rem 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-content {
+        flex-direction: column-reverse;
+    }
+
+    .esp-content {
+        display: block;
+    }
+
+    .proj-content {
+        display: block;
+    }
+
+    .sobre-content {
+        display: block;
+    }
+
+    .cont-content {
+        display: block;
+    }
+}*/
