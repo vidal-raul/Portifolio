@@ -273,11 +273,14 @@ html {
     width: 36rem;
     height: 46rem;
     border-radius: 4rem;
-    background-image: url(/img/RV2.JPG);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     cursor: pointer;
     transition: .4s;
+}
+
+#proj1 {
+    background-image: url(/img/login_page.jpg);
 }
 
 .proj-box:hover {
